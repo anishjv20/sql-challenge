@@ -1,3 +1,6 @@
+-- Importing csv files to pgadmin
+ALTER DATABASE "EmployeeSQL" SET datestyle TO "MDY";
+
 -- List the following details of each employee: employee number, last name, first name, sex, and salary.
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 FROM employees
@@ -60,4 +63,7 @@ SELECT last_name, COUNT(last_name) as last_name_count
 FROM employees
 GROUP BY last_name
 ORDER BY last_name_count DESC;
+
+
+
 
